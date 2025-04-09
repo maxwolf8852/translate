@@ -17,15 +17,15 @@ type Model struct {
 		Translation    string `json:"translation"`
 		Source         string `json:"source"`
 		Target         string `json:"target"`
-		Quality        int    `json:"quality"`
+		Quality        any    `json:"quality"`
 		Reference      any    `json:"reference"`
-		UsageCount     int    `json:"usage-count"`
+		UsageCount     any    `json:"usage-count"`
 		Subject        string `json:"subject"`
 		CreatedBy      string `json:"created-by"`
 		LastUpdatedBy  string `json:"last-updated-by"`
 		CreateDate     string `json:"create-date"`
 		LastUpdateDate string `json:"last-update-date"`
-		Match          int    `json:"match"`
-		Penalty        int    `json:"penalty"`
+		Match          any    `json:"match"`
+		Penalty        any    `json:"penalty"`
 	} `json:"matches"`
 }

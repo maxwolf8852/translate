@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 
 	"translate"
 )
@@ -60,5 +61,5 @@ func (p *Provider) Translate(ctx context.Context, from, to translate.Lang, text 
 }
 
 func makeRequest(from, to translate.Lang, text string) string {
-	return fmt.Sprintf("%s?q=%s&langpair=%s|%s", baseUrl, text, from, to)
+	return fmt.Sprintf("%s?q=%s&langpair=%s|%s", baseUrl, url.QueryEscape(text), from, to)
 }
