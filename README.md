@@ -37,14 +37,13 @@ fmt.Println(out)
 This example skips all errors until the last one and prints the last (successful or not) output.
 
 ```go
-client, err := translate.New(
-            translate.WithSkipErrors(),
+client, err := translate.New(translate.WithSkipErrors(),
 			translate.WithProvider(google.New()),
 			translate.WithProvider(mymemory.New()), ...)
 if err != nil {
     return err
 }
-out, err := client.Translate(t.Context(), translate.EN, translate.FR, "Hello world!")
+out, err := client.Translate(context.TODO(), translate.EN, translate.FR, "Hello world!")
 if err != nil {
     return err
 }
