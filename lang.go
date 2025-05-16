@@ -25,4 +25,10 @@ const (
 	RO Lang = "ro"
 	CS Lang = "cs"
 	DA Lang = "da"
+	MT Lang = "mt"
+	SK Lang = "sk"
+	SL Lang = "sl"
+	LO Lang = "lo"
+	LV Lang = "lv"
+	ET Lang = "et"
 )

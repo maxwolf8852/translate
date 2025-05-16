@@ -3,7 +3,8 @@ package translate
 import "context"
 
 type Client struct {
-	provider Provider
+	providers  []Provider
+	skipErrors bool
 }
 
 func New(options ...Option) (*Client, error) {
@@ -19,8 +20,13 @@ func New(options ...Option) (*Client, error) {
 }
 
 func (c *Client) Translate(ctx context.Context, from, to Lang, text string) (string, error) {
-	if c.provider == nil {
-		return "", ErrUnknownProvider
+	for i := range c.providers {
+		out, err := c.providers[i].Translate(ctx, from, to, text)
+		if err != nil && c.skipErrors && i != len(c.providers)-1 {
+			continue
+		}
+		return out, err
 	}
-	return c.provider.Translate(ctx, from, to, text)
+
+	return "", ErrNoProviders
 }

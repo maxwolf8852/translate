@@ -31,7 +31,12 @@ func (p *Provider) Translate(ctx context.Context, from, to translate.Lang, text 
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
+	switch resp.StatusCode {
+	case http.StatusOK:
+		// pass
+	case http.StatusTooManyRequests:
+		return "", translate.ErrTooManyRequests
+	default:
 		return "", fmt.Errorf("%w: %d", translate.ErrStatusCode, resp.StatusCode)
 	}
 
