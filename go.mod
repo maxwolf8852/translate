@@ -1,4 +1,4 @@
-module translate
+module github.com/maxwolf8852/translate
 
 go 1.24.0
 

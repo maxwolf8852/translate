@@ -8,7 +8,7 @@ import (
 	"io"
 	"net/http"
 
-	"translate"
+	"github.com/maxwolf8852/translate"
 )
 
 type Provider struct {

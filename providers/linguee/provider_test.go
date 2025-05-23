@@ -3,9 +3,9 @@ package linguee_test
 import (
 	"testing"
 
-	"translate"
+	"github.com/maxwolf8852/translate"
 
-	"translate/providers/linguee"
+	"github.com/maxwolf8852/translate/providers/linguee"
 
 	"github.com/stretchr/testify/require"
 )

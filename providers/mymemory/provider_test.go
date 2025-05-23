@@ -3,7 +3,7 @@ package mymemory_test
 import (
 	"testing"
 
-	"translate/providers/mymemory"
+	"github.com/maxwolf8852/translate/providers/mymemory"
 
 	"github.com/stretchr/testify/require"
 )

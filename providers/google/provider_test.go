@@ -3,9 +3,9 @@ package google_test
 import (
 	"testing"
 
-	"translate"
+	"github.com/maxwolf8852/translate"
 
-	"translate/providers/google"
+	"github.com/maxwolf8852/translate/providers/google"
 
 	"github.com/stretchr/testify/require"
 )

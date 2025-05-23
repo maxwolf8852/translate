@@ -1,6 +1,6 @@
 package linguee
 
-import "translate"
+import "github.com/maxwolf8852/translate"
 
 var code2lang = map[translate.Lang]string{
 	translate.EN: "english",

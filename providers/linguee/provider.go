@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"translate"
+	"github.com/maxwolf8852/translate"
 
 	"golang.org/x/net/html"
 )
